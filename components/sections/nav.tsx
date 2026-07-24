@@ -15,7 +15,7 @@ export default function Nav() {
   const progress = useSpring(scrollYProgress, { stiffness: 140, damping: 28 });
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-[oklch(0.965_0.006_90/0.8)] backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-[oklch(0.965_0.006_90/0.94)]">
       <div className="mx-auto flex h-12 max-w-6xl items-center justify-between px-4 sm:px-6">
         <a href="#top" className="flex items-center gap-2 font-mono text-xs tracking-[0.25em] text-black">
           <span className="blink inline-block h-1.5 w-1.5 bg-ember" />

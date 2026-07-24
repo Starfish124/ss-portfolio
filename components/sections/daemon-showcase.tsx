@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import SectionHeader from "@/components/sections/section-header";
 
@@ -40,22 +40,28 @@ export default function DaemonShowcase() {
   const [tape, setTape] = useState({ line: 0, chars: 0 });
   const [clock, setClock] = useState("--:--:--");
   const dragRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  // all timers idle while the section is off screen
+  const inView = useInView(sectionRef, { margin: "15% 0px" });
 
   useEffect(() => {
+    if (!inView) return;
     const t = setInterval(
       () => setClock(new Date().toTimeString().slice(0, 8)),
       1000
     );
     return () => clearInterval(t);
-  }, []);
+  }, [inView]);
 
   useEffect(() => {
+    if (!inView) return;
     const t = setInterval(() => setApp((a) => (a + 1) % APPS.length), 2600);
     return () => clearInterval(t);
-  }, []);
+  }, [inView]);
 
   // type the current line out; once complete, rest, then advance
   useEffect(() => {
+    if (!inView) return;
     if (tape.chars < CONSOLE_LINES[tape.line].length) {
       const t = setInterval(
         () => setTape((s) => ({ ...s, chars: s.chars + 1 })),
@@ -69,12 +75,16 @@ export default function DaemonShowcase() {
       2100
     );
     return () => clearTimeout(t);
-  }, [tape]);
+  }, [tape, inView]);
 
   const typed = CONSOLE_LINES[tape.line].slice(0, tape.chars);
 
   return (
-    <section id="deck" className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
+    <section
+      ref={sectionRef}
+      id="deck"
+      className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-24"
+    >
       <SectionHeader title="DAEMON DECK" />
 
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-[auto_1fr] sm:gap-16">

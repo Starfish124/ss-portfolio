@@ -146,13 +146,19 @@ export default function Decomposition() {
               scale: rigScale,
               y: rigY,
               transformStyle: "preserve-3d",
+              willChange: "transform",
             }}
             className="relative mt-[26svh] h-[min(66vw,320px)] w-[min(66vw,320px)] sm:mt-[18svh]"
           >
             {/* ground shadow */}
             <motion.div
-              style={{ scale: shadowScale, opacity: shadowOpacity, z: -120 }}
-              className="absolute inset-[-12%] rounded-full bg-black blur-2xl"
+              style={{
+                scale: shadowScale,
+                opacity: shadowOpacity,
+                z: -120,
+                willChange: "transform, opacity",
+              }}
+              className="absolute inset-[-12%] rounded-full bg-black blur-xl"
             />
 
             {/* pin field */}
