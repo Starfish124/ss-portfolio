@@ -16,11 +16,11 @@ const APPS = [
 
 const CONSOLE_LINES = [
   "watching your disk die one gigabyte at a time, sir.",
-  "ears: DJI MIC MINI — healthy · wake word armed",
-  "mind: claude — full machine access, three memory tiers",
-  "voice: kokoro bm_fable @ 1.04× — comms filter engaged",
-  "hands: pinch-hold 200ms → 7-way radial menu",
-  "link: GLS → PI → DMN — all channels nominal",
+  "ears: DJI MIC MINI healthy · wake word armed",
+  "mind: claude · full machine access, three memory tiers",
+  "voice: kokoro bm_fable @ 1.04× · comms filter engaged",
+  "hands: pinch hold 200ms → 7 way radial menu",
+  "link: GLS → PI → DMN · all channels nominal",
 ];
 
 const FACTS = [
@@ -75,7 +75,7 @@ export default function DaemonShowcase() {
 
   return (
     <section id="deck" className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-      <SectionHeader idx="02" kicker="LIVE TRANSCRIPT // FAITHFUL RE-CREATION" title="THE DAEMON DECK" />
+      <SectionHeader title="DAEMON DECK" />
 
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-[auto_1fr] sm:gap-16">
         {/* app rail — plain type, active line indented */}
@@ -100,14 +100,14 @@ export default function DaemonShowcase() {
         {/* jarvis console — open transcript */}
         <div className="flex min-h-44 flex-col">
           <p className="mb-3 flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] text-black/70">
-            <span className="blink inline-block h-1.5 w-1.5 rounded-full bg-black" />
-            JARVIS — LIVE
+            <span className="blink inline-block h-1.5 w-1.5 rounded-full bg-ember" />
+            JARVIS LIVE
           </p>
-          <p className="caret text-xl font-medium leading-relaxed text-black/85 sm:text-3xl">
+          <p className="caret text-lg font-medium leading-relaxed text-black/85 sm:text-3xl">
             “{typed}”
           </p>
           <p className="mt-auto pt-6 font-mono text-[9px] tracking-[0.22em] text-black/40">
-            SEE · HEAR · SPEAK — THE REAL SHELL RUNS ON THE PI 5 + MAC MINI
+            THE REAL SHELL RUNS ON A PI 5 AND A MAC MINI
           </p>
         </div>
       </div>

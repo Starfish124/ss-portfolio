@@ -16,15 +16,15 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SARVESH//SINGH — AI SYSTEMS",
+  title: "SARVESH SINGH · AI SYSTEMS",
   description:
-    "One month of output: eleven AI systems — local coding agents, audit copilots, wearable holographic HUDs, always-listening assistants. Local models, sovereign data.",
+    "One month of output: eleven AI systems. Local coding agents, audit copilots, a wearable holographic HUD, an always on voice assistant. Local models, sovereign data.",
   openGraph: {
-    title: "SARVESH//SINGH — AI SYSTEMS",
+    title: "SARVESH SINGH · AI SYSTEMS",
     description:
       "Eleven AI systems shipped in thirty days. Scroll to take the processor apart.",
     type: "website",
-    siteName: "SARVESH//SINGH",
+    siteName: "SARVESH SINGH",
   },
 };
 

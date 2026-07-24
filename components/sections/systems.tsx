@@ -37,7 +37,7 @@ function ProjectRow({ p, i }: { p: Project; i: number }) {
         whileTap={{ scale: 0.995 }}
         className="grid w-full cursor-pointer grid-cols-[auto_auto_1fr_auto] items-center gap-x-4 py-5 text-left sm:gap-x-7 sm:py-7"
       >
-        <span className="stroke-text font-mono text-lg font-bold sm:text-2xl">
+        <span className="stroke-text font-mono text-base font-bold sm:text-2xl">
           {p.idx}
         </span>
 
@@ -54,10 +54,10 @@ function ProjectRow({ p, i }: { p: Project; i: number }) {
           variants={{ hover: { x: 8 } }}
           transition={{ type: "spring", stiffness: 320, damping: 26 }}
         >
-          <span className="block text-2xl font-semibold tracking-tight text-black sm:text-4xl">
+          <span className="block text-xl font-semibold tracking-tight text-black sm:text-4xl">
             {p.name}
           </span>
-          <span className="mt-1 block text-sm leading-snug text-black/60 sm:text-[15px]">
+          <span className="mt-1 block text-[13px] leading-snug text-black/60 sm:text-[15px]">
             {p.sub}
           </span>
         </motion.span>
@@ -95,7 +95,7 @@ function ProjectRow({ p, i }: { p: Project; i: number }) {
                   {p.stack.join("  ·  ")}
                 </p>
                 <p className="mt-2 flex items-center gap-1.5 font-mono text-[9px] tracking-[0.18em] text-black/40">
-                  <span className="blink inline-block h-1 w-1 rounded-full bg-black" />
+                  <span className="blink inline-block h-1 w-1 rounded-full bg-ember" />
                   {p.status}
                 </p>
               </div>
@@ -122,7 +122,7 @@ function ProjectRow({ p, i }: { p: Project; i: number }) {
 export default function Systems() {
   return (
     <section id="systems" className="mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-      <SectionHeader idx="01" kicker="INDEX // JULY 2026" title="SYSTEMS SHIPPED" />
+      <SectionHeader title="SYSTEMS SHIPPED" />
       <div>
         {PROJECTS.map((p, i) => (
           <ProjectRow key={p.code} p={p} i={i} />

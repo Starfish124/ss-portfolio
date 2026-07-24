@@ -19,7 +19,7 @@ import { PROJECTS } from "@/lib/data";
  * Pure CSS 3D driven by scroll progress; no WebGL, phone-first.
  */
 
-const CORES = [...PROJECTS.map((p) => p.code), "S//S"];
+const CORES = [...PROJECTS.map((p) => p.code), "SS"];
 
 function Caption({
   p,
@@ -38,7 +38,7 @@ function Caption({
   return (
     <motion.div style={{ opacity, y }} className="absolute inset-x-0 bottom-0">
       <p className="kicker">{kicker}</p>
-      <p className="mt-2 max-w-md text-lg font-medium leading-snug text-black/80 sm:text-xl">
+      <p className="mt-2 max-w-md text-[15px] font-medium leading-snug text-black/80 sm:text-xl">
         {line}
       </p>
     </motion.div>
@@ -122,17 +122,15 @@ export default function Decomposition() {
           style={{ opacity: nameOpacity, y: nameY }}
           className="relative z-10 mx-auto w-full max-w-6xl px-5 pt-24 sm:px-8 sm:pt-28"
         >
-          <p className="kicker mb-4">
-            SYS.PORTFOLIO // BUILD 2026.07 // ONE MONTH OF OUTPUT
-          </p>
-          <h1 className="text-[15vw] font-bold leading-[0.88] tracking-tight text-black sm:text-8xl">
+          <p className="kicker mb-4">JULY 2026 · ONE MONTH OF OUTPUT</p>
+          <h1 className="text-[12vw] font-bold leading-[0.88] tracking-tight text-black sm:text-8xl">
             SARVESH
             <br />
             <span className="stroke-text">SINGH</span>
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-black/65 sm:text-lg">
-            AI systems engineer. Eleven systems shipped in thirty days — this
-            is the processor that month ran on. Scroll to take it apart.
+          <p className="mt-5 max-w-xl text-sm leading-relaxed text-black/65 sm:text-lg">
+            AI systems engineer. I shipped eleven systems in thirty days and
+            this is the processor that month ran on. Scroll to take it apart.
           </p>
         </motion.div>
 
@@ -176,7 +174,7 @@ export default function Decomposition() {
               className="absolute inset-0 border border-black/25 bg-[#e9e6de] shadow-[0_0_0_1px_rgb(255_255_255/0.5)_inset]"
             >
               <span className="absolute bottom-[4%] left-[5%] font-mono text-[7px] tracking-[0.2em] text-black/40">
-                S//S PKG · 2026.07
+                SS PKG · 2026.07
               </span>
               <span className="absolute right-[5%] top-[4%] font-mono text-[7px] tracking-[0.2em] text-black/40">
                 NL
@@ -225,10 +223,10 @@ export default function Decomposition() {
             >
               <span aria-hidden className="pearl-iridescent absolute inset-0 opacity-60" />
               <span className="absolute inset-0 flex items-center justify-center font-mono text-[9px] tracking-[0.34em] text-black/60 sm:text-[11px]">
-                S//S CORE
+                SS CORE
               </span>
               <span className="absolute bottom-[6%] right-[7%] font-mono text-[6.5px] tracking-[0.2em] text-black/40 sm:text-[8px]">
-                11 SYSTEMS / 30 DAYS
+                11 SYSTEMS · 30 DAYS
               </span>
             </motion.div>
           </motion.div>
@@ -240,26 +238,26 @@ export default function Decomposition() {
             <Caption
               p={p}
               range={[0.14, 0.32]}
-              kicker="STAGE 01 // LID OFF"
-              line="The classical shell comes away. Underneath, the month is machinery."
+              kicker="LID OFF"
+              line="The lid comes off. Underneath is everything I built this month."
             />
             <Caption
               p={p}
               range={[0.34, 0.5]}
-              kicker="STAGE 02 // CPU RAISED"
-              line="Deterministic core: interlocks, provenance checks, hash-chained audit."
+              kicker="CPU RAISED"
+              line="The deterministic core. Interlocks, provenance checks and a hash chained audit log."
             />
             <Caption
               p={p}
               range={[0.52, 0.72]}
-              kicker="STAGE 03 // NPU EXPOSED"
-              line="The neural engine — eleven cores, all running on hardware I control."
+              kicker="NPU EXPOSED"
+              line="The neural engine. Eleven cores, all running on hardware I control."
             />
             <Caption
               p={p}
               range={[0.74, 0.97]}
-              kicker="STAGE 04 // CORES DEPLOYED"
-              line="Every core is a shipped system. The index follows."
+              kicker="CORES DEPLOYED"
+              line="Every core is a shipped system. The full index is below."
             />
           </div>
         </div>
@@ -281,7 +279,7 @@ export default function Decomposition() {
 
         {/* progress rail */}
         <div className="absolute bottom-6 right-4 top-20 w-px bg-black/10 sm:right-6">
-          <motion.div style={railScale} className="h-full w-px origin-top bg-black" />
+          <motion.div style={railScale} className="h-full w-px origin-top bg-ember" />
         </div>
       </div>
     </div>

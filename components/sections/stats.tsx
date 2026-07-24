@@ -11,15 +11,14 @@ export default function Stats() {
             <Counter
               value={s.value}
               suffix={s.suffix}
-              className="holo-text font-mono text-4xl font-bold tabular-nums sm:text-6xl"
+              className="holo-text font-mono text-3xl font-bold tabular-nums sm:text-6xl"
             />
             <p className="kicker mt-3">{s.label}</p>
-            <p className="mt-1 font-mono text-[10px] text-black/35">{s.note}</p>
           </div>
         ))}
       </Reveal>
       <p className="mt-6 font-mono text-[10px] tracking-wider text-black/35">
-        TEST COUNT = GT-CODE 553 · GT ASSURE 105 · GLASSBOX 63 · STRIDE 65 — ALL GREEN AT LAST RUN
+        553 + 105 + 63 + 65 tests, all green at last run.
       </p>
     </section>
   );

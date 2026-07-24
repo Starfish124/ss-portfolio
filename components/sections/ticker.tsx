@@ -9,7 +9,7 @@ function Row() {
           className="flex items-center font-mono text-[11px] tracking-[0.3em] text-black/55"
         >
           <span className="px-5">{t}</span>
-          <span aria-hidden className="text-black/25">◆</span>
+          <span aria-hidden className="text-ember-soft">◆</span>
         </span>
       ))}
     </div>
