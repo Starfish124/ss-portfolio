@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- pearl ground -->
+  <rect width="128" height="128" fill="#f3f1ec"/>
+  <!-- pins -->
+  <g stroke="#17130e" stroke-opacity="0.4" stroke-width="3">
+    <path d="M44 30V19M64 30V19M84 30V19"/>
+    <path d="M44 98v11M64 98v11M84 98v11"/>
+    <path d="M30 44H19M30 64H19M30 84H19"/>
+    <path d="M98 44h11M98 64h11M98 84h11"/>
+  </g>
+  <!-- chip body -->
+  <rect x="30" y="30" width="68" height="68" fill="#17130e"/>
+  <!-- inner hairline -->
+  <rect x="37" y="37" width="54" height="54" fill="none" stroke="#f3f1ec" stroke-opacity="0.28" stroke-width="2"/>
+  <!-- pin-1 marker -->
+  <rect x="37" y="37" width="6" height="6" fill="#bf5d1d"/>
+  <!-- wordmark -->
+  <text x="65" y="75" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="34" font-weight="700" letter-spacing="1" fill="#bf5d1d">SS</text>
+</svg>

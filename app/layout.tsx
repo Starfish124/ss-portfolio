@@ -16,6 +16,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ss-portfolio-delta.vercel.app"),
   title: "SARVESH SINGH · AI SYSTEMS",
   description:
     "One month of output: eleven AI systems. Local coding agents, audit copilots, a wearable holographic HUD, an always on voice assistant. Local models, sovereign data.",
@@ -25,7 +26,15 @@ export const metadata: Metadata = {
       "Eleven AI systems shipped in thirty days. Scroll to take the processor apart.",
     type: "website",
     siteName: "SARVESH SINGH",
+    url: "/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "SARVESH SINGH · AI SYSTEMS",
+    description:
+      "Eleven AI systems shipped in thirty days. Scroll to take the processor apart.",
+  },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
